@@ -1,0 +1,14 @@
+<% if params[:category].present? %>
+  <h1 class="current-category"><%= params[:category] %></h1>  
+<% else %>
+  <h1>Recently Created Books</h1>  
+<% end %>
+<% @books.each do |book| %>
+  <h2><%= link_to book.title, book_path(book) %></h2>
+<% end %>
+
+
+
+
+
+
